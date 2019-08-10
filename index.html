@@ -13,10 +13,16 @@
       </ul> -->
 
       <!-- =========== show all array value =========== -->
-      <ul>
+      <!-- <ul>
         <li v-for="v in vehicle"> {{v}}</li>
-      </ul>
+      </ul> -->
 
+      <!-- =========== add array value =========== -->
+      <input type="text" v-model="content">
+      <button @click="add">Add data</button>
+      <ul>
+        <li v-for="v in vehicle">{{v}}</li>
+      </ul>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <script src="apps.js"></script>

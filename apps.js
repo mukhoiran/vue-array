@@ -7,7 +7,20 @@ var app = new Vue({
   // }
 
   // <!-- =========== show all array value =========== -->
+  // data:{
+  //   vehicle:['car','motorcycle','bike']
+  // }
+
+  // <!-- =========== add array value =========== -->
   data:{
-    vehicle:['car','motorcycle','bike']
+    content:'',
+    vehicle: ['car','motorcycle','bike']
+  },
+  methods:{
+    add: function(){
+      this.vehicle.push(this.content)
+      this.content = ''
+    }
   }
+  
 })
