@@ -12,6 +12,18 @@ var app = new Vue({
   // }
 
   // <!-- =========== add array value =========== -->
+  // data:{
+  //   content:'',
+  //   vehicle: ['car','motorcycle','bike']
+  // },
+  // methods:{
+  //   add: function(){
+  //     this.vehicle.push(this.content)
+  //     this.content = ''
+  //   }
+  // }
+
+  // <!-- =========== remove array value =========== -->
   data:{
     content:'',
     vehicle: ['car','motorcycle','bike']
@@ -20,7 +32,10 @@ var app = new Vue({
     add: function(){
       this.vehicle.push(this.content)
       this.content = ''
+    },
+    delete(index){
+      this.vehicle.splice(index, 1);
     }
   }
-  
+
 })
