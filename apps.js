@@ -24,19 +24,19 @@ var app = new Vue({
   // }
 
   // <!-- =========== remove array value =========== -->
-  data:{
-    content:'',
-    vehicle: ['car','motorcycle','bike']
-  },
-  methods:{
-    add: function(){
-      this.vehicle.push(this.content)
-      this.content = ''
-    },
-    deleteEvent(index){
-      this.vehicle.splice(index, 1);
-    }
-  }
+  // data:{
+  //   content:'',
+  //   vehicle: ['car','motorcycle','bike']
+  // },
+  // methods:{
+  //   add: function(){
+  //     this.vehicle.push(this.content)
+  //     this.content = ''
+  //   },
+  //   deleteEvent(index){
+  //     this.vehicle.splice(index, 1);
+  //   }
+  // }
 
   // <!-- =========== array multivalue =========== -->
   // data:{
@@ -46,4 +46,25 @@ var app = new Vue({
   //     {type:'bike', merk:'polygon', color:'blue'},
   //   ]
   // }
+
+  // <!-- =========== array with computed property =========== -->
+  data:{
+    products:[
+      {type:'book', stock:true},
+      {type:'pen', stock:true},
+      {type:'tipeX', stock:false},
+      {type:'calculator', stock:false},
+      {type:'paper', stock:false},
+      {type:'spidol', stock:true}
+    ]
+  },
+  computed:{
+    productReady(){
+      return this.products.filter(p => p.stock)
+    },
+    productEmpty(){
+      return this.products.filter(p => !p.stock)
+    }
+  }
+
 })

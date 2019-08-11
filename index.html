@@ -25,14 +25,14 @@
       </ul> -->
 
       <!-- =========== remove array value =========== -->
-      <input type="text" v-model="content">
+      <!-- <input type="text" v-model="content">
       <button @click="add">Add data</button>
       <ul>
         <li v-for="(v, index) in vehicle">
           <button @click="deleteEvent(index)">x</button>
           {{v}}
         </li>
-      </ul>
+      </ul> -->
 
       <!-- =========== array multivalue =========== -->
       <!-- <ul v-for="v in vehicle">
@@ -43,6 +43,20 @@
         </li>
       </ul> -->
 
+      <!-- =========== array with computed property =========== -->
+      <h2>All products</h2>
+      <ul>
+        <li v-for="p in products" v-text="p.type"></li>
+      </ul>
+      <h2>All ready products</h2>
+      <ul>
+        <li v-for="p in productReady" v-text="p.type"></li>
+      </ul>
+      <h2>All empty products</h2>
+      <ul>
+        <li v-for="p in productEmpty" v-text="p.type"></li>
+      </ul>
+      
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <script src="apps.js"></script>
