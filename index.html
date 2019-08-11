@@ -58,8 +58,11 @@
       </ul> -->
 
       <!-- =========== array looping =========== -->
-      <b v-for="x in 10">{{x}}</b>
-      
+      <!-- <b v-for="x in 10">{{x}}</b> -->
+
+      <!-- =========== array looping 2 =========== -->
+      <b v-for="x in 10" v-if="x != 2">{{x}}</b>
+
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <script src="apps.js"></script>
