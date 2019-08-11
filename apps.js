@@ -48,23 +48,24 @@ var app = new Vue({
   // }
 
   // <!-- =========== array with computed property =========== -->
-  data:{
-    products:[
-      {type:'book', stock:true},
-      {type:'pen', stock:true},
-      {type:'tipeX', stock:false},
-      {type:'calculator', stock:false},
-      {type:'paper', stock:false},
-      {type:'spidol', stock:true}
-    ]
-  },
-  computed:{
-    productReady(){
-      return this.products.filter(p => p.stock)
-    },
-    productEmpty(){
-      return this.products.filter(p => !p.stock)
-    }
-  }
+  // data:{
+  //   products:[
+  //     {type:'book', stock:true},
+  //     {type:'pen', stock:true},
+  //     {type:'tipeX', stock:false},
+  //     {type:'calculator', stock:false},
+  //     {type:'paper', stock:false},
+  //     {type:'spidol', stock:true}
+  //   ]
+  // },
+  // computed:{
+  //   productReady(){
+  //     return this.products.filter(p => p.stock)
+  //   },
+  //   productEmpty(){
+  //     return this.products.filter(p => !p.stock)
+  //   }
+  // }
 
+  // <!-- =========== array looping =========== -->
 })
