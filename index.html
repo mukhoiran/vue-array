@@ -25,16 +25,24 @@
       </ul> -->
 
       <!-- =========== remove array value =========== -->
-      <input type="text" v-model="content">
+      <!-- <input type="text" v-model="content">
       <button @click="add">Add data</button>
       <ul>
         <li v-for="(v, index) in vehicle">
           <button @click="delete(index)">x</button>
           {{v}}
         </li>
+      </ul> -->
+
+      <!-- =========== array multivalue =========== -->
+      <ul v-for="v in vehicle">
+        <li>
+          type : {{v.type}}, <br>
+          merk : {{v.merk}}, <br>
+          color : {{v.color}}
+        </li>
       </ul>
 
-      
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <script src="apps.js"></script>

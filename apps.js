@@ -24,18 +24,26 @@ var app = new Vue({
   // }
 
   // <!-- =========== remove array value =========== -->
-  data:{
-    content:'',
-    vehicle: ['car','motorcycle','bike']
-  },
-  methods:{
-    add: function(){
-      this.vehicle.push(this.content)
-      this.content = ''
-    },
-    delete(index){
-      this.vehicle.splice(index, 1);
-    }
-  }
+  // data:{
+  //   content:'',
+  //   vehicle: ['car','motorcycle','bike']
+  // },
+  // methods:{
+  //   add: function(){
+  //     this.vehicle.push(this.content)
+  //     this.content = ''
+  //   },
+  //   delete(index){
+  //     this.vehicle.splice(index, 1);
+  //   }
+  // }
 
+  // <!-- =========== array multivalue =========== -->
+  data:{
+    vehicle: [
+      {type:'car', merk:'toyota', color:'black'},
+      {type:'motorcycle', merk:'honda', color:'red'},
+      {type:'bike', merk:'polygon', color:'blue'},
+    ]
+  }
 })
