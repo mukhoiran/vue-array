@@ -61,7 +61,13 @@
       <!-- <b v-for="x in 10">{{x}}</b> -->
 
       <!-- =========== array looping 2 =========== -->
-      <b v-for="x in 10" v-if="x != 2">{{x}}</b>
+      <!-- <b v-for="x in 10" v-if="x != 2">{{x}}</b> -->
+
+      <!-- =========== array search =========== -->
+      <input type="text" v-model="search" placeholder="Search base on merk">
+      <ul v-for="fv in filtervehicle">
+        <li>type : {{fv.type}}, merk: {{fv.merk}}, color : {{fv.color}}</li>
+      </ul>
 
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>

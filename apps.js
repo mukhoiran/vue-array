@@ -70,4 +70,21 @@ var app = new Vue({
   // <!-- =========== array looping =========== -->
 
   // <!-- =========== array looping 2 =========== -->
+
+  // <!-- =========== array search =========== -->
+  data:{
+    search:'',
+    vehicle:[
+      {type:'car', merk:'toyota', color:'black'},
+      {type:'motorcycle', merk:'honda', color:'red'},
+      {type:'bike', merk:'polygon', color:'blue'},
+    ]
+  },
+  computed:{
+    filtervehicle: function(){
+      return this.vehicle.filter((fv) => {
+        return fv.merk.match(this.search)
+      })
+    }
+  }
 })
